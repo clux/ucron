@@ -18,14 +18,16 @@ command /usr/bin/find me
 ## Caveats
 **Only** allows the 5 most normal types of cron expressions with integers within the [normal bounds](https://en.wikipedia.org/wiki/Cron#Overview).
 
-- integer (at this unit)
-- */integer (at every 1 over this unit)
-- comma separated integer (these units only)
-- integer-integer (all integers units in the specified range [start,end-1])
-- * (all available integer units in allowed range)
+Specifically:
 
-`ucron` also does not care for things like:
+- `integer` (at this unit)
+- `*/integer` (at every 1 over this unit)
+- `comma separated integers` (these units only)
+- `integer-integer` (all integers units in the specified range [start,end-1])
+- `*` (all available integer units in allowed range)
+
+`ucron` also does not care if you ask it for things like:
 
 - running on the 31st day of even numbered months.
-- allowing day 7 in days (some allow this)
+- running on day 7 in days (some allow this, but we use 0 indexed days)
 - expressions given in unsorted order (you get what you put in)
