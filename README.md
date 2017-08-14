@@ -21,7 +21,7 @@ command /usr/bin/find me
 Specifically:
 
 - `integer` (at this unit)
-- `*/integer` (at every 1 over this unit)
+- `*/integer` (at every increment of this unit)
 - `comma separated integers` (these units only)
 - `integer-integer` (all integers units in the specified range [start,end-1])
 - `*` (all available integer units in allowed range)
