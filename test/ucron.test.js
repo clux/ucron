@@ -14,14 +14,14 @@ test('canonical', function *T(t) {
 
 var checkError = function (t, str, kls, reason) {
   try {
-    parse(str)
+    parse(str);
     t.false('should not reach this');
   }
-  catch (e){
+  catch (e) {
     // could match this error message a bit better, but w/e
     t.ok(e instanceof kls, reason);
   }
-}
+};
 
 test('invalids', function *T(t) {
   checkError(t, '* * * * *', Error, 'need a command');

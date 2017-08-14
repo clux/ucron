@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const parse = require('.')
+const parse = require('.');
 
 function prettyPrint(obj) {
   console.log('minute', obj.min);
@@ -11,8 +11,7 @@ function prettyPrint(obj) {
 }
 
 try {
-  let res = parse(process.argv[2])
-  prettyPrint(res);
+  prettyPrint(parse(process.argv[2]));
 }
 catch (e) {
   console.warn(e.message);
