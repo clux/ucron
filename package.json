@@ -1,0 +1,29 @@
+{
+  "name": "ucron",
+  "private": true,
+  "description": "Minimalistic cron expander",
+  "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "clux/ucron"
+  },
+  "main": "parser.js",
+  "bin": {
+    "ucron": "cron.js"
+  },
+  "scripts": {
+    "test": "bndg test/*.test.js",
+    "precoverage": "istanbul cover bndg test/*.test.js",
+    "coverage": "cat coverage/lcov.info && rm -rf coverage"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bandage": "^0.5.0",
+    "istanbul": "^0.4.5"
+  },
+  "bugs": {
+    "url": "http://github.com/clux/ucron/issues"
+  },
+  "license": "MIT"
+}
